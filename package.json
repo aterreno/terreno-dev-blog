@@ -14,7 +14,7 @@
     "url": "https://github.com/netlify-templates/nextjs-blog-theme/issues"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev --turbopack",
     "dev:watch": "next-remote-watch ./posts",
     "build": "next build",
     "start": "next start",

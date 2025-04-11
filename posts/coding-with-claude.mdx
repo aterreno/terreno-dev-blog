@@ -1,0 +1,117 @@
+---
+type: Post
+title: "🚀 Coding with Claude AI and Copilot: Real-World Lessons from a Side Project"
+description: >-
+  Spoiler: the productivity boost is wild. But it’s not all smooth sailing.
+date: '2025-04-11'
+---
+
+Over the past couple of days, I’ve been building [a scientific calculator app](https://calc.terreno.dev/) — a small but real-world project to test how well AI tools like **Claude AI** and **GitHub Copilot** can support hands-on development.
+
+This post covers what worked, what didn’t, and what it felt like to work alongside AI tools across the stack, in multiple languages, with real deployments.
+
+---
+
+## 🧪 What I Actually Built
+
+This wasn’t a toy repo. I wired up:
+
+- A **React frontend**, an **API Gateway** (Node.js), and multiple backend services (each in a different programming language)  
+- GitHub Actions CI for test/build on each service  
+- Cloud deployments to **AWS ECS**  
+- Docker images pushed to **Docker Hub**  
+- Infrastructure as code with **Terraform**  
+- Automated **security upgrades** via GitHub  
+- Unit tests with basic coverage  
+
+All of this was built solo — just me and a couple of AIs, in less than two days. 🚀
+
+---
+
+## 🧩 Microservices Built
+
+Each calculator operation was implemented as a separate microservice, using a different programming language — to fully test the boundaries of AI-assisted development.
+
+| Service                     | Language     |
+|----------------------------|--------------|
+| addition-service           | Rust         |
+| bitwise-service            | Swift        |
+| complex-service            | Clojure      |
+| conversion-service         | TypeScript   |
+| division-service           | Ruby         |
+| factorial-service          | Elixir       |
+| log-service                | PHP          |
+| matrix-service             | Julia        |
+| memory-service             | C#           |
+| multiplication-service     | Python       |
+| power-service              | Java         |
+| square-root-service        | F#           |
+| subtraction-service        | Go           |
+| trig-service               | Kotlin       |
+
+---
+
+## 🤖 What It’s Like to Code with Claude
+
+### 🌀 Language Roulette
+
+Claude started with C++, then tried Erlang, then Nim... and eventually landed on Python. It tends to give up quickly on languages that aren’t well-supported in its training data. Some ecosystems clearly vibe better with Claude — Python, TypeScript, and Go stand out.
+
+That said, I appreciated that it suggested Swift for bitwise operations and Julia for matrix computations — both of which are well-supported and appropriate for those tasks.
+
+For Scala and other JVM-based languages, it defaulted to JDK 17. I’m not a big Scala fan, so I didn’t push it further. But I was able to get Kotlin, Java, and Clojure services up and running relatively smoothly.
+
+### 🧪 Test Generation Is Bonkers
+
+Claude generated Kotlin test coverage *without being asked*. That was both surprising and impressive. That said, it doesn’t automatically write tests or provide local run instructions unless explicitly prompted.
+
+Once nudged, though — scaffolding tests, mocking dependencies, handling edge cases — it becomes frighteningly effective.
+
+### 📝 Documentation? One Prompt Away
+
+Need a `README`? A high-level service overview? Terraform module documentation? Claude can generate solid drafts with minimal prompting. It’s not always perfect, but it provides a fast and structured starting point.
+
+Honestly, I’m starting to believe that `README`s and architecture diagrams should be auto-generated on every commit to keep things current and coherent.
+
+---
+
+## 🆚 Claude vs Copilot
+
+They complement each other surprisingly well:
+
+- **Copilot** is great for inline completions, boilerplate code, and quick fixes.  
+- **Claude** excels at planning entire services, generating multi-file scaffolding, writing documentation, and reviewing larger code blocks.
+
+That said, they don’t yet *think together*. You’ll find yourself re-prompting and switching contexts between the two more than you’d like.
+
+---
+
+## 🛠️ Lessons Learned: Best Practices Matter More Than Ever
+
+I went a bit wild and asked Claude to generate the entire project in one go. In hindsight, I would’ve been more productive starting with a single operation or microservice at a time.
+
+I also should’ve asked it to generate tests and local run instructions for *every* service right from the beginning. Doing so early would’ve made iteration and debugging much smoother.
+
+---
+
+## ⏭️ What’s Next
+
+In the next post, I’ll explore how Claude helped write most of the **infrastructure code** using Terraform — including ECS task definitions, IAM policies, and secrets management.
+
+I’ll also begin enhancing **observability and operability** by integrating **OpenTelemetry** into the architecture.
+
+---
+
+## 💬 Final Thoughts
+
+The power of AI in development workflows is *very real*. But it’s not magic — it still requires thoughtful engineering, clear thinking, and a skeptical eye.
+
+That said, when it works... it *flies*. I’d estimate at least a **10x productivity boost** on a project like this. The business logic is simple and well-understood, but the distributed, multi-language architecture adds real-world complexity.
+
+If you’re experimenting with Claude, Copilot, or other AI-assisted dev tools, I’d love to hear what’s working for you (or what’s not). Drop me a message on [LinkedIn](https://www.linkedin.com/in/antonioterreno/).
+
+---
+
+### #Tags
+
+#AI #ClaudeAI #Copilot #DeveloperTools #
